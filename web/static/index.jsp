@@ -1,10 +1,12 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <html>
 <head>
     <title>$Title$</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
           integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="../css/style.css"/>
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
             integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
             crossorigin="anonymous"></script>
@@ -14,7 +16,17 @@
             crossorigin="anonymous"></script>
 </head>
 <body>
-<h1>List Students</h1>
+<h1><c:out value="${listStudents}"/></h1>
+
+<table>
+    <c:forEach items="${stringList}" var="studentName">
+        <tr>
+            <td>
+                    ${studentName}
+            </td>
+        </tr>
+    </c:forEach>
+</table>
 
 <div class="container" style="background-color: antiquewhite">
     <form action="#" class="form-inline">
