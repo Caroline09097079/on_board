@@ -14,7 +14,7 @@ public class GroupDao {
         Group group = null;
 
         try {
-            statement = ConnectionManager.conn().prepareStatement("select * from groupp where id = ?");
+            statement = ConnectionManager.conn().prepareStatement("select * from groupp where id =K;
             statement.setLong(1, id);
             ResultSet result = statement.executeQuery();
             result.next();
