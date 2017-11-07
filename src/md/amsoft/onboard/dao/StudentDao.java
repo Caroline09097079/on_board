@@ -27,9 +27,18 @@ public class StudentDao {
         try {
             statement = ConnectionManager.conn().createStatement();
             result = statement.executeQuery("select * from person p left join student s on p.id = s.id");
+//select m.* from mark m left join student s on s.id = m.student_id where s.id = ?
 
+            /*
+            select p.* from phone p
+            left join phone_type pt on pt.id = p.phone_type_id
+            left join person_phones pp on pp.phone_id = p.id
+            left join student s on s.id = pp.person_id
+            where s.id = ?
+             */
             while (result.next()) {
                 Student student = new Student();
+                student.setDob(result.getDate("dob").toLocalDate());
                 student.setDob(result.getDate("dob").toLocalDate());
                 student.setFirstname(result.getString("first_name"));
                 student.setAddress(adressDao.findOneById(result.getLong("address_id")));

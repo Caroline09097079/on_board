@@ -4,7 +4,6 @@ import java.util.Collection;
 
 public class Student extends Person {
 
-
     private Group group;
 
     private Collection<Mark> marks;
@@ -17,6 +16,14 @@ public class Student extends Person {
 
     public Group getGroup() {
         return group;
+    }
+
+    public Collection<Mark> getMarks() {
+        return marks;
+    }
+
+    public void setMarks(Collection<Mark> marks) {
+        this.marks = marks;
     }
 
     public void setGroup(Group group) {
