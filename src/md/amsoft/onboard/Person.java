@@ -16,7 +16,7 @@ public class Person {
 
     private Phone phones;
 
-    private byte picture;h
+    private byte picture;
 
 
 
