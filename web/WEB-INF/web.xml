@@ -6,7 +6,7 @@
 
     <servlet>
         <servlet-name>ServletName</servlet-name>
-        <servlet-class>md.amsoft.onboard.ServleName</servlet-class>
+        <servlet-class>md.amsoft.onboard.controler.StudentController</servlet-class>
     </servlet>
 
     <servlet-mapping>

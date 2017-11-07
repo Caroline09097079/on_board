@@ -19,10 +19,13 @@
 <h1><c:out value="${listStudents}"/></h1>
 
 <table>
-    <c:forEach items="${stringList}" var="studentName">
+    <c:forEach items="${studentList}" var="student">
         <tr>
             <td>
-                    ${studentName}
+                    ${student.getFirstname()}
+            </td>
+            <td>
+                    ${student.getAddress().getCity()}
             </td>
         </tr>
     </c:forEach>

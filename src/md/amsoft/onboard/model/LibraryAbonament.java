@@ -1,4 +1,4 @@
-package md.amsoft.onboard;
+package md.amsoft.onboard.model;
 
 public class LibraryAbonament {
 }
